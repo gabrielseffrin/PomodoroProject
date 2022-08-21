@@ -1,21 +1,17 @@
 # projetoWeb2
 
-# GitHub Pages
-
-<https://utfpr-gp.github.io/roubank/>
-
 # Checkist
 
 Caixas de Diálogo
 
-- [x] prompt
-- [x] alert
-- [x] confirm
+- [ ] prompt
+- [ ] alert
+- [ ] confirm
 
 Temporizadores
 
-- [x] setInterval
-- [x] setTimeout
+- [ ] setInterval
+- [ ] setTimeout
 
 Funções
 
