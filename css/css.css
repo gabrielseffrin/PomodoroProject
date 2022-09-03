@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+#task {
+    width: 370px;
+    height: 790px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+
+    background: #4F73B6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#task h1 {
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 75px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#add-task {
+    width: 10em;
+    height: 3em;
+
+    margin-top: 0.5em;
+
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#add-task p {
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 57px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#title {
+    width: auto;
+    height: auto;
+    margin-top: 15%;
+    margin-top: 5%;
+}
+
+#title h1 {
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 144px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4F73B6;
+}
+
+#settins {
+    margin-left: 90%;
+    margin-top: 2%;
+}
+
+#settins i {
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+#timer {
+    width: 35.5em;
+    height: 18em;
+    margin-top: 15%;
+
+    position: relative;
+
+    background: #4F73B6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.watchTimer {
+    position: absolute;
+    justify-content: center;
+    margin-left: 26%;
+
+    font-size: 100px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+}
+
+#cont {}
+
+#play-button {
+    width: 10em;
+    height: 3em;
+    margin-top: 30%;
+    margin-left: 36%;
+}
+
+.button {
+    box-shadow: 0px 4px 0px #a69a5d;
+    border-radius: 50px;
+    border: none;
+    background: #FFFFFF;
+
+    transition: all 150ms linear;
+}
+
+.button:hover {
+    box-shadow: 0px -2px 0px rgb(165, 159, 126);
+    background-color: #e6e6e6;
+    transition: all 250ms linear;
+}
+
+.button:hover img {
+    margin-top: 4px;
+    transition: all 200ms linear;
+}
+
+.button:hover p {
+    margin-top: 1px;
+    transition: all 200ms linear;
+}
+
+#progress-bar {
+    width: 570px;
+
+    position: relative;
+
+    display: flex;
+    margin-right: 5px;
+    background: #F0C418;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid #000000;
+}
+
+#square {
+    width: auto;
+    height: 80%;
+
+    margin-top: 5%;
+    background: #7B8DAF;
+    border-radius: 5px;
+}
+
+#sa {
+    width: 7px;
+    height: 17px;
+    left: 184px;
+    top: 6px;
+
+    background: #F36A8D;
+    border-radius: 10px;
+}
