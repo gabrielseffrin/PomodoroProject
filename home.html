@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
 
     <!-- font link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -37,8 +39,27 @@
                         <div id="cont"><span id="time">25:00</span></div>
                     </div>
                 </div>
-                <button class="button" onclick="onclickStartButton()" id="play-button">
-                    <img src="image/triangular play button.png" alt="" srcset="">
+
+                <script>
+                    $(document).ready(function () {
+                        $("#stop").hide();
+                        $("#play").show();
+
+                        $("#play").click(function () {
+                            $("#stop").toggle();
+                            $("#play").toggle();
+                        });
+
+                        $("#stop").click(function () {
+                            $("#stop").toggle();
+                            $("#play").toggle();
+                        });
+                    });
+                </script>
+
+                <button class="button play-stop-button">
+                    <img id="play" src="image/play.png" alt="" srcset="" onclick="onclickStartButton()">
+                    <img id="stop" src="image/pause.svg" alt="" srcset="" onclick="onclickPauseButton()">
                 </button>
             </div>
             <div id="task" class="col-6">
@@ -87,7 +108,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal" value="Save changes">
+                    <input type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal"
+                        value="Save changes">
                 </div>
             </div>
         </div>

@@ -110,7 +110,7 @@
 
 #cont {}
 
-#play-button {
+.play-stop-button {
     width: 10em;
     height: 3em;
     margin-top: 30%;
