@@ -42,24 +42,31 @@
 
                 <script>
                     $(document).ready(function () {
-                        $("#stop").hide();
+                        $("#stops").hide();
+                        $("#resume").hide();
                         $("#play").show();
 
                         $("#play").click(function () {
-                            $("#stop").toggle();
+                            $("#stops").toggle();
                             $("#play").toggle();
                         });
 
-                        $("#stop").click(function () {
-                            $("#stop").toggle();
-                            $("#play").toggle();
+                        $("#stops").click(function () {
+                            $("#stops").toggle();
+                            $("#resume").toggle();
+                        });
+
+                        $("#resume").click(function () {
+                            $("#stops").toggle();
+                            $("#resume").toggle();
                         });
                     });
                 </script>
 
                 <button class="button play-stop-button">
-                    <img id="play" src="image/play.png" alt="" srcset="" onclick="onclickStartButton()">
-                    <img id="stop" src="image/pause.svg" alt="" srcset="" onclick="onclickPauseButton()">
+                    <img id="play" src="image/play.png" alt="" srcset="" onclick="start()">
+                    <img id="resume" src="image/play.png" alt="" srcset="" onclick="resume()">
+                    <img id="stops" src="image/pause.svg" alt="" srcset="" onclick="stops()">
                 </button>
             </div>
             <div id="task" class="col-6">
