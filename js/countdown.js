@@ -1,38 +1,66 @@
-let timer = document.getElementById('minutes-user').value * 60
-let id
+let _timer
+let _id
+const _posicao = [1, 2]
+
+document.getElementById('enviar').onclick = () => {
+    _timer = document.getElementById('minutes-user').value * 60
+}
+
+function positicaoPomodoro(posicao) {
+    switch (posicao) {
+        case 1:
+            stops()
+            temporizador(_timer)
+            return;
+        case 2:
+            stops()
+            temporizador(5*60)
+            return;
+        default:
+            break;
+    }
+}
 
 function temporizador(time) {
-    timer = time
-    var display = document.querySelector('#time')
+    _timer = time
+    let display = document.querySelector('#time')
+    let progressBar = document.querySelector('#progress-bar')
 
-    id = setInterval(function () {
-        var minutes = parseInt(timer / 60)
-        var seconds = parseInt(timer % 60)
+    _id = setInterval(function () {
+        let minutes = parseInt(_timer / 60)
+        let seconds = parseInt(_timer % 60)
 
         //caso o valor seja menor que 10, add 0 esquerda
         minutes = minutes < 10 ? "0" + minutes : minutes
         seconds = seconds < 10 ? "0" + seconds : seconds
 
-        display.textContent = `${minutes}:${seconds}`
-        if (--timer < 0) {
-            clearInterval(id)
+        display.innerHTML = `${minutes}:${seconds}`
+        progressBar.innerHTML = `<span id="sa">${_timer}</span><br>`
+        if (--_timer < 0) {
+            stops()            
+            positicaoPomodoro(_posicao[1])
         }
     }, 1000)
 }
 
+let verificarValor = () => {
+    if(_timer == undefined)
+        return _timer = 25 * 60
+    else
+        return _timer
+}
+
 function start() {
-    temporizador(timer)
+    temporizador(verificarValor())
 }
 
 function stops() {
-    clearInterval(id)
+    clearInterval(_id)
 }
 
 function resume() {
-    temporizador(timer)
+    temporizador(_timer)
 }
-
-console.log(timer)
 
 // let minutesUser
 // let _break
@@ -41,7 +69,7 @@ console.log(timer)
 // let timePomodoro
 // let _tempoRestante
 
-// let refreshIntervalId 
+// let refreshInterval_Id 
 
 // function onclickStartButton() {
 //     clearInterval(refreshIntervalId)

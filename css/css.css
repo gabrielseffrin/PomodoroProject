@@ -143,15 +143,7 @@
 }
 
 #progress-bar {
-    width: 570px;
-
-    position: relative;
-
-    display: flex;
-    margin-right: 5px;
-    background: #F0C418;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 2px solid #000000;
+    padding: 0;
 }
 
 #square {
@@ -168,6 +160,8 @@
     height: 17px;
     left: 184px;
     top: 6px;
+
+    margin-left: 1%;
 
     background: #F36A8D;
     border-radius: 10px;
