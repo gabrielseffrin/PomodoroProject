@@ -1,9 +1,10 @@
 let _timer
 let _id
+let totalTime
 const _posicao = [1, 2]
 
 document.getElementById('enviar').onclick = () => {
-    _timer = document.getElementById('minutes-user').value * 60
+    totalTime = _timer = document.getElementById('minutes-user').value * 60
 }
 
 function positicaoPomodoro(posicao) {
@@ -14,6 +15,8 @@ function positicaoPomodoro(posicao) {
             return;
         case 2:
             stops()
+            _timer = 5*60
+            totalTime = _timer
             temporizador(5*60)
             return;
         default:
@@ -23,19 +26,23 @@ function positicaoPomodoro(posicao) {
 
 function temporizador(time) {
     _timer = time
-    let display = document.querySelector('#time')
-    let progressBar = document.querySelector('#progress-bar')
+    //total = _timer
+    console.log(totalTime)
+    let display = document.querySelector('#cont')
+    let progress = document.querySelector('.progress-bar')
 
     _id = setInterval(function () {
         let minutes = parseInt(_timer / 60)
         let seconds = parseInt(_timer % 60)
+
+        let percentageProgress = ((totalTime - _timer ) / totalTime) * 100 
 
         //caso o valor seja menor que 10, add 0 esquerda
         minutes = minutes < 10 ? "0" + minutes : minutes
         seconds = seconds < 10 ? "0" + seconds : seconds
 
         display.innerHTML = `${minutes}:${seconds}`
-        progressBar.innerHTML = `<span id="sa">${_timer}</span><br>`
+        progress.style.cssText = `width: ${''+percentageProgress}%`
         if (--_timer < 0) {
             stops()            
             positicaoPomodoro(_posicao[1])
@@ -44,10 +51,14 @@ function temporizador(time) {
 }
 
 let verificarValor = () => {
-    if(_timer == undefined)
-        return _timer = 25 * 60
-    else
+    if(_timer == undefined){
+        totalTime = 25 * 60
+        return _timer = totalTime
+    }        
+    else {
+        totalTime = _timer
         return _timer
+    }
 }
 
 function start() {

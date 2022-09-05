@@ -3,20 +3,19 @@
     padding: 0;
 }
 
-
+body {
+    min-width: 620px;
+}
 #task {
     width: 370px;
     height: 790px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 5% auto !important;
     position: relative;
 
     background: #4F73B6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+    /*     margin: 0 auto !important; */
 }
 
 #task h1 {
@@ -88,7 +87,7 @@
 #timer {
     width: 35.5em;
     height: 18em;
-    margin-top: 15%;
+    margin: auto !important;
 
     position: relative;
 
@@ -108,13 +107,12 @@
 
 }
 
-#cont {}
-
 .play-stop-button {
     width: 10em;
     height: 3em;
-    margin-top: 30%;
+    margin-top: 28%;
     margin-left: 36%;
+    margin-bottom: 2%;
 }
 
 .button {
@@ -142,7 +140,7 @@
     transition: all 200ms linear;
 }
 
-#progress-bar {
+.progress-bar {
     padding: 0;
 }
 
@@ -153,16 +151,4 @@
     margin-top: 5%;
     background: #7B8DAF;
     border-radius: 5px;
-}
-
-#sa {
-    width: 7px;
-    height: 17px;
-    left: 184px;
-    top: 6px;
-
-    margin-left: 1%;
-
-    background: #F36A8D;
-    border-radius: 10px;
 }

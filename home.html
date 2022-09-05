@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pomodoro</title>
 
     <!-- font link -->
@@ -35,7 +36,7 @@
                 </div>
                 <div class="watchTimer">
                     <div id="col">
-                        <div id="cont"><span id="time">25:00</span></div>
+                        <div id="cont">25:00</div>
                     </div>
                 </div>
 
@@ -67,6 +68,14 @@
                     <img id="resume" src="image/play.png" alt="" srcset="" onclick="resume()">
                     <img id="stops" src="image/pause.svg" alt="" srcset="" onclick="stops()">
                 </button>
+                <div id="progress-bar" class="">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning bg-gradient"
+                            role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 0%"></div>
+                    </div>
+                </div>
             </div>
             <div id="task" class="col-6">
                 <h1>Tasks</h1>
@@ -76,16 +85,6 @@
                 </button>
             </div>
         </div>
-
-        <!-- progress bar -->
-        <div class="row">
-            <div id="progress-bar" class="col-6">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                  </div>
-            </div>
-        </div>
-
     </div>
 
     <!-- Modal -->
