@@ -1,0 +1,19 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "https://www.figma.com/proto/4m78M3IqJ66LTKFS3S3fuJ/Untitled?node-id=9%3A117&starting-point-node-id=9%3A117",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielseffrin/projetoWeb2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielseffrin/projetoWeb2/issues"
+  },
+  "homepage": "https://github.com/gabrielseffrin/projetoWeb2#readme"
+}
