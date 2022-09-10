@@ -1,5 +1,5 @@
 {
-  "name": "projeto",
+  "name": "pomodoro_timer",
   "version": "1.0.0",
   "description": "https://www.figma.com/proto/4m78M3IqJ66LTKFS3S3fuJ/Untitled?node-id=9%3A117&starting-point-node-id=9%3A117",
   "main": "index.js",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gabrielseffrin/projetoWeb2/issues"
   },
-  "homepage": "https://github.com/gabrielseffrin/projetoWeb2#readme"
+  "homepage": "https://github.com/gabrielseffrin/projetoWeb2#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "jquery": "^3.6.1"
+  }
 }
