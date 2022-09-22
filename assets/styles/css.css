@@ -1,5 +1,6 @@
-@import url(/app/pages/header/style.css);
+/* @import url(/app/pages/header/style.css);
 @import url(/assets/styles/reset.css);
+@import url(/app/pages/countdown/style.css); */
 
 * {
     box-sizing: border-box;
@@ -9,10 +10,29 @@
 body {
     min-width: 620px;
 }
+
+#title {
+    width: auto;
+    height: auto;
+}
+
+#title h1 {
+    font-family: 'Arima Madurai';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 144px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #4F73B6;
+}
+
 #task {
     width: 370px;
     height: 790px;
-    margin: 5% auto !important;
+    margin: 0% auto !important;
     position: relative;
 
     background: #4F73B6;

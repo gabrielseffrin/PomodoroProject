@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pomodoro</title>
 
@@ -19,15 +18,20 @@
     <link rel="stylesheet" href="assets/styles/css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <script>
+        $(function () {
+            $('#footer').load('/footer.html');
+            $('#header').load('/header.html');
+        });
+    </script>
 </head>
 
 <body>
     <div class="container">
-        <div class="row" id="title">
-            <div class="col">
-                <h1>Pomodoro timer</h1>
-            </div>
-        </div>
+
+        <div id="header"></div>
+
         <div class="row">
             <div id="timer" class="col-6">
                 <div id="settins">
@@ -70,9 +74,8 @@
                 <div id="progress-bar" class="">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning bg-gradient"
-                            role="progressbar"
-                            aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                            style="width: 0%"></div>
+                            role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -119,12 +122,12 @@
         </div>
     </div>
 
+
+
+
 </body>
-
-<!-- JavaScript Bundle with Popper -->
-
-
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/countdown.js"></script>
+<script src="/app/util/countdown.js"></script>
+<script src="/app/shared.js"></script>
 
 </html>

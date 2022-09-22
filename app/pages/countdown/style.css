@@ -1,0 +1,40 @@
+#settins {
+    margin-left: 90%;
+    margin-top: 2%;
+}
+
+#settins i {
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+#timer {
+    width: 35.5em;
+    height: 18em;
+    margin: auto !important;
+
+    position: relative;
+
+    background: #4F73B6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.watchTimer {
+    position: absolute;
+    justify-content: center;
+    margin-left: 26%;
+
+    font-size: 100px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+}
+
+.play-stop-button {
+    width: 10em;
+    height: 3em;
+    margin-top: 28%;
+    margin-left: 36%;
+    margin-bottom: 2%;
+}
