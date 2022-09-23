@@ -29,4 +29,5 @@ function addTask() {
   index++
   document.getElementById('square-task').innerHTML = taskString
 
+
 }
