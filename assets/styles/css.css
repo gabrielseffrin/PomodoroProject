@@ -2,8 +2,6 @@
 @import url(/assets/styles/reset.css);
 @import url(/app/pages/countdown/style.css); */
 
-@import url(task.css);
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -149,7 +147,7 @@ body {
     padding: 0;
 }
 
-#square-task {
+#square {
     width: auto;
     height: 80%;
 

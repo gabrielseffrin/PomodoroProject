@@ -1,4 +1,4 @@
-export class Task {
+export default class Task {
     constructor(text, isVisible) {
         this.text = text
         this.isVisible = isVisible
