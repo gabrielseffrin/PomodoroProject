@@ -1,6 +1,6 @@
 # Countdown
 
-# #timer projeto para a disciplina de web-2
+# projeto para a disciplina de web-2
 
 https://www.figma.com/proto/4m78M3IqJ66LTKFS3S3fuJ/Untitled?node-id=9%3A117&starting-point-node-id=9%3A117
 
