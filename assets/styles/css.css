@@ -1,5 +1,6 @@
 @import url(task.css);
 @import url(header.css);
+@import url(statistics.css);
 
 * {
     box-sizing: border-box;
