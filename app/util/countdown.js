@@ -3,7 +3,7 @@
 let _timer
 let _id
 
-let totalTime //guardando o tempo total]
+let totalTime //guardando o tempo total
 let timeToFocus
 let shortBreak = 5
 const _posicao = [1, 2]
@@ -17,13 +17,25 @@ function posicaoPomodoro(posicao) {
     switch (posicao) {
         case 1:
             //stops()
-            totalTime = timeToFocus
-            temporizador(timeToFocus, 1)
+            var condicao = confirm('Time to focus')
+
+            if (condicao) {
+                totalTime = timeToFocus
+                temporizador(timeToFocus, 1)
+            } else {
+                stops()
+            }
             return;
         case 2:
             //stops()
-            totalTime = shortBreak
-            temporizador(shortBreak, 0)
+            var condicao = confirm('Time to a short break')
+
+            if (condicao) {
+                totalTime = shortBreak
+                temporizador(shortBreak, 0)
+            } else {
+                stops()
+            }
             return;
         default:
             break;

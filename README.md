@@ -6,9 +6,9 @@ https://www.figma.com/proto/4m78M3IqJ66LTKFS3S3fuJ/Untitled?node-id=9%3A117&star
 
 Caixas de Diálogo
 
-- [ ] prompt
-- [ ] alert
-- [ ] confirm
+- [x] prompt
+- [x] alert
+- [x] confirm
 
 Temporizadores
 
@@ -19,10 +19,10 @@ Funções
 
 - [ ] Função anônima com argumento
 - [x] Função anônima sem argumento
-- [ ] Função anônima com retorno
+- [x] Função anônima com retorno
 - [ ] Função auto-executável
 - [x] Função com nome
-- [ ] Função aninhada/local - declarar uma função dentro de outra
+- [x] Função aninhada/local - declarar uma função dentro de outra
 - [ ] Passagem de uma função como parâmetro
 - [x] Função Flecha - Arrow Function
 
@@ -39,7 +39,7 @@ Acesso aos elementos DOM do HTML
 
 - [x] Via referência DOM pelo id do elemento HTML
 - [x] Via getElementByID()
-- [ ] Via getElementsByName()
+- [x] Via getElementsByName()
 - [ ] Via getElementsByTagName()
 - [x] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 

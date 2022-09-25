@@ -15,4 +15,8 @@ export class User {
     get _minutes() {
         return this.minutes * 60
     }
+
+    get hours() {
+        return 0
+    }
 }
