@@ -1,35 +1,40 @@
+'use strict';
+
 let _timer
 let _id
-let totalTime
+
+let totalTime //guardando o tempo total]
+let timeToFocus
 let shortBreak = 5
 const _posicao = [1, 2]
 
 document.getElementById('enviar').onclick = () => {
-    totalTime = _timer = document.getElementById('minutes-user').value * 60
-    shortBreak = document.querySelector('#break')
+    timeToFocus = _timer = document.getElementById('minutes-user').value //* 60
+    shortBreak = document.querySelector('#break').value //* 60
 }
 
 function posicaoPomodoro(posicao) {
     switch (posicao) {
         case 1:
             //stops()
-            temporizador(_timer)
+            totalTime = timeToFocus
+            temporizador(timeToFocus, 1)
             return;
         case 2:
             //stops()
-            _timer = 5 * 60
-            totalTime = _timer
-            temporizador(5 * 60)
+            totalTime = shortBreak
+            temporizador(shortBreak, 0)
             return;
         default:
             break;
     }
 }
 
-function temporizador(time) {
+function temporizador(time, posicao) {
     _timer = time
-    //total = _timer
-    console.log(totalTime)
+
+    posicao = posicao == undefined ? 1 : posicao
+
     let display = document.querySelector('#cont')
     let progress = document.querySelector('.progress-bar')
 
@@ -47,7 +52,7 @@ function temporizador(time) {
         progress.style.cssText = `width: ${''+percentageProgress}%`
         if (--_timer < 0) {
             stops()
-            posicaoPomodoro(_posicao[1])
+            posicaoPomodoro(_posicao[posicao])
         }
 
     }, 1000)
