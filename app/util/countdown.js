@@ -1,5 +1,3 @@
-'use strict';
-
 let _timer
 let _id
 
@@ -9,8 +7,20 @@ let shortBreak = 5
 const _posicao = [1, 2]
 
 document.getElementById('enviar').onclick = () => {
-    timeToFocus = _timer = document.getElementById('minutes-user').value //* 60
-    shortBreak = document.querySelector('#break').value //* 60
+    timeToFocus = _timer = document.getElementById('minutes-user').value * 60
+    shortBreak = document.querySelector('#break').value * 60
+}
+
+document.getElementById('play').onclick = () => {
+    start()
+}
+
+document.getElementById('resume').onclick = () => {
+    resume()
+}
+
+document.getElementById('stops').onclick = () => {
+    stops()
 }
 
 function posicaoPomodoro(posicao) {
@@ -20,6 +30,7 @@ function posicaoPomodoro(posicao) {
             var condicao = confirm('Time to focus')
 
             if (condicao) {
+                updateTimeUser(timeToFocus)
                 totalTime = timeToFocus
                 temporizador(timeToFocus, 1)
             } else {
@@ -62,13 +73,13 @@ function temporizador(time, posicao) {
 
         display.innerHTML = `${minutes}:${seconds}`
         progress.style.cssText = `width: ${''+percentageProgress}%`
+
         if (--_timer < 0) {
             stops()
             posicaoPomodoro(_posicao[posicao])
         }
 
     }, 1000)
-
 }
 
 let verificarValor = () => {
@@ -91,4 +102,18 @@ function stops() {
 
 function resume() {
     temporizador(_timer)
+}
+
+function updateTimeUser(time) {
+    var user = JSON.parse(localStorage.getItem('user.padrao'))
+    user.minutes += (time / 60)
+
+    document.getElementById('tempo-focado').innerHTML = user.minutes + 'min'
+
+    localStorage.clear()
+    localStorage.setItem(user, JSON.stringify(user))
+}
+
+export {
+    timeToFocus
 }
