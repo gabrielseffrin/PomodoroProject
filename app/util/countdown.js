@@ -7,11 +7,12 @@ let shortBreak = 5
 const _posicao = [1, 2]
 
 document.getElementById('enviar').onclick = () => {
-    timeToFocus = _timer = document.getElementById('minutes-user').value * 60
-    shortBreak = document.querySelector('#break').value * 60
+    timeToFocus = _timer = document.getElementById('minutes-user').value //* 60
+    shortBreak = document.querySelector('#break').value //* 60
 }
 
 document.getElementById('play').onclick = () => {
+    //const caminho = bip.mp3
     start()
 }
 
@@ -27,6 +28,8 @@ function posicaoPomodoro(posicao) {
     switch (posicao) {
         case 1:
             //stops()
+            audioplay()
+
             var condicao = confirm('Time to focus')
 
             if (condicao) {
@@ -39,6 +42,8 @@ function posicaoPomodoro(posicao) {
             return;
         case 2:
             //stops()
+            audioplay()
+
             var condicao = confirm('Time to a short break')
 
             if (condicao) {
@@ -112,6 +117,14 @@ function updateTimeUser(time) {
 
     localStorage.clear()
     localStorage.setItem(user, JSON.stringify(user))
+}
+
+function audioplay() {
+    var audio = new Audio('assets/audio/clockRing.mp3')
+    audio.play()
+    setTimeout(function () {
+        audio.pause()
+    }, 2000)
 }
 
 export {
