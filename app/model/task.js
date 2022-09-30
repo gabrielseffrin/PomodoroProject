@@ -7,7 +7,7 @@ export function Task(text, isVisible) {
         return this._text
     }
 
-    function getUIsVisible() {
+    function getIsVisible() {
         return this._isVisible
     }
 
@@ -19,7 +19,7 @@ export function Task(text, isVisible) {
                     <div id="conteudo">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            ${this._text}
+                            ${getText()}
                         </label>
                     </div>
                 </div>
