@@ -40,7 +40,7 @@ function addTask() {
 
         let taskString
         let taskContent = document.getElementsByName('tasks')[0].value
-        let task = new Task(taskContent, true)
+        let task = Task(taskContent, true)
         tasks.push(task)
 
         taskString = ``

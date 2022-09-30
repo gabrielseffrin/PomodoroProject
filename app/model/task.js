@@ -1,18 +1,17 @@
-export class Task {
-    constructor(text, isVisible) {
-        this._text = text
-        this._isVisible = isVisible
-    }
+export function Task(text, isVisible) {
 
-    get text() {
+    this._text = text
+    this._isVisible = isVisible
+
+    function getText() {
         return this._text
     }
 
-    get isVisible() {
+    function getUIsVisible() {
         return this._isVisible
     }
 
-    getTask() {
+    function getTask() {
         return `
         <div class="row">
             <div id="col">
