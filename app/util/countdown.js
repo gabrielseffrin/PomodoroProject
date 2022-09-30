@@ -7,8 +7,8 @@ let shortBreak = 5
 const _posicao = [1, 2]
 
 document.getElementById('enviar').onclick = () => {
-    timeToFocus = _timer = document.getElementById('minutes-user').value //* 60
-    shortBreak = document.querySelector('#break').value //* 60
+    timeToFocus = _timer = document.getElementById('minutes-user').value * 60
+    shortBreak = document.querySelector('#break').value * 60
 }
 
 document.getElementById('play').onclick = () => {

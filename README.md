@@ -28,7 +28,7 @@ Funções
 
 Eventos
 
-- [ ] Evento de carregamento do documento - onload
+- [x] Evento de carregamento do documento - onload
 - [ ] Evento de movimento do mouse
 - [ ] Evento de teclado - usar charCode ou keyCode
 - [ ] Eventos de formulário - onfocus e onblur
@@ -60,7 +60,7 @@ Objetos Nativos
 Objetos
 
 - [ ] Criar objeto usando função construtora ou notação literal
-- [ ] Criar objetos a partir da definição de classes do ES6
+- [x] Criar objetos a partir da definição de classes do ES6
 - [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
 Qualidade do código
@@ -69,7 +69,7 @@ Qualidade do código
 - [ ] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 - [ ] Usar strict mode
 - [ ] Usar Module Pattern
-- [ ] Usar pasta assets e subpastas resources e libraries para organizar o código
+- [x] Usar pasta assets e subpastas resources e libraries para organizar o código
 - [x] Usar let ou const ao invés de var
 - [ ] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 
