@@ -1,17 +1,19 @@
-export function Task(text, isVisible) {
+export class Task {
+    constructor(text, isVisible) {
 
-    this._text = text
-    this._isVisible = isVisible
 
-    function getText() {
+        this._text = text
+        this._isVisible = isVisible
+    }
+    getText() {
         return this._text
     }
 
-    function getIsVisible() {
+    getIsVisible() {
         return this._isVisible
     }
 
-    function getTask() {
+    getTask() {
         return `
         <div class="row">
             <div id="col">
@@ -19,7 +21,7 @@ export function Task(text, isVisible) {
                     <div id="conteudo">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            ${getText()}
+                            ${this._text}
                         </label>
                     </div>
                 </div>

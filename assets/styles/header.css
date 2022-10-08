@@ -1,17 +1,8 @@
-#title {
-    width: auto;
-    height: auto;
-}
-
-#title h1 {
+#title a {
     font-family: 'Arima Madurai';
     font-style: normal;
     font-weight: 700;
-    font-size: 88px;
-    line-height: 144px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    font-size: 25px;
     color: #4F73B6;
 }
 

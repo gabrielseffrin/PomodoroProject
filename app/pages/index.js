@@ -29,7 +29,7 @@ function initializeUsers() {
     localStorage.setItem(USER_NAME, JSON.stringify(user))
 }
 
-const tasks = new Array()
+const tasks = []
 
 const buttonAddTask = document.querySelector("#text-task")
 buttonAddTask.addEventListener("click", addTask)
