@@ -5,7 +5,7 @@ export class User {
         this._task.push(task)
         this._username = userName;
         this._password = password;
-        this._minutes = minutes
+        this._minutes = minutes;
     }
 
     get task() {

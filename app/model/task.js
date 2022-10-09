@@ -2,7 +2,7 @@ export class Task {
     constructor(text, isVisible) {
 
 
-        this._text = text
+        this._text = text;
         this._isVisible = isVisible
     }
     getText() {

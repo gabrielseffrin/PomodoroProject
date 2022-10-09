@@ -19,6 +19,7 @@
   "homepage": "https://github.com/gabrielseffrin/projetoWeb2#readme",
   "dependencies": {
     "bootstrap": "^5.2.1",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "jshint": "^2.13.5"
   }
 }
