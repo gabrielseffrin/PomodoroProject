@@ -59,7 +59,7 @@ Objetos Nativos
 
 Objetos
 
-- [x] Criar objeto usando função construtora ou notação literal
+- [ ] Criar objeto usando função construtora ou notação literal
 - [x] Criar objetos a partir da definição de classes do ES6
 - [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
