@@ -163,11 +163,11 @@
                     <form method="get" novalidate>
                         <div class="mb-3">
                             <label for="minutes" class="col-form-label">Minutes:</label>
-                            <input type="number" class="form-control" value="25" id="minutes-user">
+                            <input type="number" class="form-control" value="25" id="minutes-user" required>
                         </div>
                         <div class="mb-3">
                             <label for="break" class="col-form-label">Break:</label>
-                            <input type="number" class="form-control" value="5" id="break">
+                            <input type="number" class="form-control" value="5" id="break" required>
                         </div>
                     </form>
                 </div>
@@ -181,7 +181,7 @@
     </div>
 
 
-    <!-- modal login
+    <!-- modal login-->
     <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -192,8 +192,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-body">
-                        <h5>Nome</h5>
-
+                        <label for="inputName">Name</label>
+                        <input id="inputName" value="" name="name" required>
                         <hr>
                         <h5>Tooltips in a modal</h5>
 
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </body>
 <!-- 
 <script>
