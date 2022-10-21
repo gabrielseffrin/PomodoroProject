@@ -3,14 +3,14 @@ export class Task {
 
 
         this._text = text;
-        this._isVisible = isVisible
+        this._isVisible = isVisible;
     }
     getText() {
-        return this._text
+        return this._text;
     }
 
     getIsVisible() {
-        return this._isVisible
+        return this._isVisible;
     }
 
     getTask() {
@@ -19,7 +19,8 @@ export class Task {
             <div id="col">
                 <div class="form-check task">
                     <div id="conteudo">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value=""
+                         id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             ${this._text}
                         </label>
@@ -27,6 +28,6 @@ export class Task {
                 </div>
             </div>
         </div>
-        `
+        `;
     }
 }
