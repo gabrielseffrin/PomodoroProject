@@ -2,7 +2,7 @@
 
 import {
     User
-} from "../model/user.js";
+} from '../model/user.js';
 
 let timeRestante;
 let idToStopTimer;
@@ -24,10 +24,10 @@ function resume() {
 
 function updateTimeUser(time) {
     let user = JSON.parse(localStorage.getItem('user.padrao'));
-    console.log(user);
-    console.log(user._username);
+    //console.log(user);
+    //console.log(user._username);
     user._minutes += (time / 60).toPrecision(2);
-    console.log((time / 60));
+    //console.log((time / 60));
 
     document.getElementById('tempo-focado').innerHTML = user._minutes + 'min';
 
@@ -112,7 +112,7 @@ function posicaoPomodoro(posicao) {
 let start = () => {
     audio = new Audio('assets/audio/clockRing.mp3');
 
-    temporizador(totalTime == undefined ? timeToFocus : timeRestante);
+    temporizador(totalTime === undefined ? timeToFocus : timeRestante);
 };
 
 document.getElementById('enviar').onclick = () => {
