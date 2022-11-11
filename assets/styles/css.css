@@ -11,7 +11,13 @@ body {
     min-width: 620px;
 }
 
+input:invalid {
+    border: 1px solid rgb(255, 0, 0);
+}
 
+input:valid {
+    border: 1px solid green;
+}
 
 #task {
     width: 370px;

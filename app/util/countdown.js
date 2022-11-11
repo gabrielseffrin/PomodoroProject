@@ -24,10 +24,8 @@ function resume() {
 
 function updateTimeUser(time) {
     let user = JSON.parse(localStorage.getItem('user.padrao'));
-    //console.log(user);
-    //console.log(user._username);
+
     user._minutes += (time / 60).toPrecision(2);
-    //console.log((time / 60));
 
     document.getElementById('tempo-focado').innerHTML = user._minutes + 'min';
 
@@ -114,7 +112,7 @@ let start = () => {
     temporizador(totalTime === undefined ? timeToFocus : timeRestante);
 };
 
-function validaInput(id, id2) {
+function isInputValid(id, id2) {
 
     let element = document.getElementById(id).value;
     let element2 = document.getElementById(id2).value;
@@ -128,7 +126,7 @@ function validaInput(id, id2) {
 
 document.getElementById('enviar').onclick = () => {
 
-    if (validaInput('minutes-user', 'break')) {
+    if (isInputValid('minutes-user', 'break')) {
         timeToFocus = document.getElementById('minutes-user').value * 60;
         shortBreak = document.querySelector('#break').value * 60;
     }

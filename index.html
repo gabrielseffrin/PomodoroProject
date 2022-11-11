@@ -159,7 +159,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Set Time</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="post" onsubmit="return validaInput()">
+                <form action="" method="post" onsubmit="return isInputValid()">
                     <div class="modal-body">
                         <form method="get" novalidate>
                             <div class="mb-3">
@@ -194,19 +194,23 @@
                     <h5 class="modal-title" id="staticBackdropLabel">login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <form action="" method="post" onsubmit="return isNameValid()">
                     <div class="modal-body">
-                        <label for="inputName">Name</label>
-                        <input id="inputName" value="" name="name" required>
-                        <hr>
-                        <h5>Tooltips in a modal</h5>
+                        <div class="modal-body">
+                            <label for="inputName">Name</label>
+                            <input id="inputName" value="" name="name" required>
+                            <hr>
+                            <label for="inputName">e-mail</label>
+                            <input id="inputEmail" type="email" value="" name="name" required placeholder="xxxxx@xxxxx">
 
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" id="salvar" class="btn btn-primary" data-bs-dismiss="modal"
+                            value="Save changes">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -32,6 +32,7 @@ function addTask() {
 
         let taskString;
         let taskContent = document.getElementsByName('tasks')[0].value;
+
         let task = new Task(taskContent, true);
         tasks.push(task);
 
@@ -59,12 +60,23 @@ function addTask() {
 function initializeUsers() {
     if (localStorage.getItem(USER_NAME) != null) {
         addTask();
-        return false;
+        return;
     }
     let user = new User(USER_NAME, '12345', null, 0);
 
     localStorage.setItem(USER_NAME, JSON.stringify(user));
 }
+
+function isNameValid() {
+    let name = document.getElementById('inputName').value;
+
+    if (!name.match('[A-Z][a-z].* [A-Z][a-z].*'))
+        alert('Nome Inválido');
+}
+
+document.getElementById('salvar').onclick = () => {
+    isNameValid();
+};
 
 const buttonAddTask = document.querySelector('#text-task');
 buttonAddTask.addEventListener('click', addTask);
