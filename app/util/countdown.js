@@ -111,13 +111,27 @@ function posicaoPomodoro(posicao) {
 
 let start = () => {
     audio = new Audio('assets/audio/clockRing.mp3');
-
     temporizador(totalTime === undefined ? timeToFocus : timeRestante);
 };
 
+function validaInput(id, id2) {
+
+    let element = document.getElementById(id).value;
+    let element2 = document.getElementById(id2).value;
+
+    if (element >= 1 && element2 >= 1) {
+        return true;
+    }
+    alert('tempo inválido');
+    return false;
+}
+
 document.getElementById('enviar').onclick = () => {
-    timeToFocus = document.getElementById('minutes-user').value * 60;
-    shortBreak = document.querySelector('#break').value * 60;
+
+    if (validaInput('minutes-user', 'break')) {
+        timeToFocus = document.getElementById('minutes-user').value * 60;
+        shortBreak = document.querySelector('#break').value * 60;
+    }
 };
 
 document.getElementById('play').onclick = () => {

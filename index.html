@@ -159,23 +159,27 @@
                     <h5 class="modal-title" id="exampleModalLabel">Set Time</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form method="get" novalidate>
-                        <div class="mb-3">
-                            <label for="minutes" class="col-form-label">Minutes:</label>
-                            <input type="number" class="form-control" value="25" id="minutes-user" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="break" class="col-form-label">Break:</label>
-                            <input type="number" class="form-control" value="5" id="break" required>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal"
-                        value="Save changes">
-                </div>
+                <form action="" method="post" onsubmit="return validaInput()">
+                    <div class="modal-body">
+                        <form method="get" novalidate>
+                            <div class="mb-3">
+                                <label for="minutes" class="col-form-label">Minutes:</label>
+                                <input type="number" min="1" max="60" class="form-control" value="25" id="minutes-user"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="break" class="col-form-label">Break:</label>
+                                <input type="number" min="1" max="60" class="form-control" value="5" id="break"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal"
+                            value="Save changes">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -16,8 +16,6 @@ import {
     timeToFocus
 } from '../util/countdown.js';
 
-
-
 const tasks = [];
 
 function isPossibleToAddTask() {

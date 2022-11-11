@@ -65,23 +65,23 @@ Objetos
 
 Qualidade do código
 
-- [ ] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
-- [ ] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
-- [ ] Usar strict mode
-- [ ] Usar Module Pattern
+- [x] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
+- [x] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
+- [x] Usar strict mode
+- [x] Usar Module Pattern
 - [x] Usar pasta assets e subpastas resources e libraries para organizar o código
 - [x] Usar let ou const ao invés de var
-- [ ] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
+- [x] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 
 Formulário
 
-- [ ] Validação de formulário com onsubmit usando os métodos tradicionais
-- [ ] Validação de formulário com HTML5 API
+- [x] Validação de formulário com onsubmit usando os métodos tradicionais
+- [x] Validação de formulário com HTML5 API
   - [ ] Customizar as mensagens nos balões de mensagem
   - [ ] Usar os atributos de validação dos inputs
   - [ ] Usar expressões regulares
-- [ ] Ler e escrever em elementos input com a propriedade value
-- [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
+- [x] Ler e escrever em elementos input com a propriedade value
+- [x] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
 - [ ] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 
