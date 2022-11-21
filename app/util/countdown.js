@@ -18,10 +18,6 @@ function stops() {
     clearInterval(idToStopTimer);
 }
 
-function resume() {
-    temporizador(timeRestante);
-}
-
 function updateTimeUser(time) {
     let user = JSON.parse(localStorage.getItem('user.padrao'));
 
@@ -72,13 +68,17 @@ function temporizador(time, posicao) {
     }, 1000);
 }
 
+function resume() {
+    temporizador(timeRestante);
+}
+
 function posicaoPomodoro(posicao) {
     switch (posicao) {
         case 1:
             //stops()
             audioplay();
 
-            let condicao = confirm('Time to focus');
+            let condicao = window.confirm('Time to focus');
 
             if (condicao) {
                 totalTime = timeToFocus;
@@ -93,7 +93,7 @@ function posicaoPomodoro(posicao) {
             //stops()
             audioplay();
 
-            condicao = confirm('Time to a short break');
+            condicao = window.confirm('Time to a short break');
 
             if (condicao) {
                 totalTime = shortBreak;
@@ -120,7 +120,7 @@ function isInputValid(id, id2) {
     if (element >= 1 && element2 >= 1) {
         return true;
     }
-    alert('tempo inválido');
+    window.alert('tempo inválido');
     return false;
 }
 

@@ -136,14 +136,14 @@
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-text"></i></span>
                             <input type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-sm" name="tasks" />
+                                aria-describedby="inputGroup-sizing-sm" name="task-content" />
                         </div>
                     </form>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" id="text-task" class="btn btn-primary" data-bs-dismiss="modal"
+                    <input type="submit" id="submit-task" class="btn btn-primary" data-bs-dismiss="modal"
                         value="Save changes">
                 </div>
             </div>
@@ -198,7 +198,7 @@
                     <div class="modal-body">
                         <div class="modal-body">
                             <label for="inputName">Name</label>
-                            <input id="inputName" value="" name="name" required>
+                            <input id="inputName" value="" name="name" required pattern="[A-Z][a-z].* [A-Z][a-z].*">
                             <hr>
                             <label for="inputName">e-mail</label>
                             <input id="inputEmail" type="email" value="" name="name" required placeholder="xxxxx@xxxxx">
