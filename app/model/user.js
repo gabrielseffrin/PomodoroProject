@@ -1,26 +1,30 @@
 'use strict';
 export class User {
-    constructor(userName, password, minutes) {
+    constructor(userName, minutes) {
         this._task = new Array();
         /* this._task.push(task); */
         this._username = userName;
-        this._password = password;
+        //this._password = password;
         this._minutes = minutes;
     }
 
-    get task() {
+    task() {
         return this._task;
     }
 
-    get minutes() {
-        return this.minutes * 60;
+    minutes() {
+        return this._minutes;
     }
 
-    get hours() {
+    hours() {
         return 0;
     }
 
     addTaskUser(task) {
         this._task.push(task);
+    }
+
+    updateMinutes(minutes) {
+        this._minutes += minutes;
     }
 }

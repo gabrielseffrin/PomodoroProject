@@ -3,31 +3,32 @@
 import {
     User
 } from '../model/user.js';
+import {
+    USER_NAME
+} from '../shared.js';
 
 let timeRestante;
 let idToStopTimer;
 
 let totalTime; //guardando o tempo total
-let timeToFocus = 25 * 60;
-let shortBreak = 5 * 60;
+let timeToFocus = 1 * 60; //5 * 60;
+let shortBreak = 1 * 60; //5 * 60;
 const _posicao = [1, 2];
 
 let audio;
+let condition = true;
 
 function stops() {
     clearInterval(idToStopTimer);
 }
 
-function updateTimeUser(time) {
-    let user = JSON.parse(localStorage.getItem('user.padrao'));
+export function updateTimeUser(time) {
+    let user = JSON.parse(localStorage.getItem(USER_NAME));
+    user = new User(user._username, user._minutes);
 
-    user._minutes += (time / 60).toPrecision(2);
+    user.updateMinutes(time);
+    document.getElementById('tempo-focado').innerHTML = (user.minutes() / 60) + ' min';
 
-    document.getElementById('tempo-focado').innerHTML = user._minutes + 'min';
-
-    //localStorage.clear()
-    user = new User(user._username, user._password, user._tasks, user._minutes);
-    localStorage.removeItem('user.padrao');
     localStorage.setItem('user.padrao', JSON.stringify(user));
 }
 
@@ -37,6 +38,40 @@ function audioplay() {
     setTimeout(function () {
         audio.pause();
     }, 2000);
+}
+
+function posicaoPomodoro(posicao) {
+    switch (posicao) {
+        case 1:
+            //stops()
+            audioplay();
+
+            condition = window.confirm('Time to focus');
+
+            if (condition) {
+                totalTime = timeToFocus;
+                temporizador(timeToFocus, 1);
+            } else {
+                stops();
+            }
+            return;
+        case 2:
+            //stops()
+            audioplay();
+
+            condition = window.confirm('Time to a short break');
+            updateTimeUser(timeToFocus);
+
+            if (condition) {
+                totalTime = shortBreak;
+                temporizador(shortBreak, 0);
+            } else {
+                stops();
+            }
+            return;
+        default:
+            break;
+    }
 }
 
 function temporizador(time, posicao) {
@@ -70,41 +105,6 @@ function temporizador(time, posicao) {
 
 function resume() {
     temporizador(timeRestante);
-}
-
-function posicaoPomodoro(posicao) {
-    switch (posicao) {
-        case 1:
-            //stops()
-            audioplay();
-
-            let condicao = window.confirm('Time to focus');
-
-            if (condicao) {
-                totalTime = timeToFocus;
-                temporizador(timeToFocus, 1);
-                updateTimeUser(timeToFocus);
-
-            } else {
-                stops();
-            }
-            return;
-        case 2:
-            //stops()
-            audioplay();
-
-            condicao = window.confirm('Time to a short break');
-
-            if (condicao) {
-                totalTime = shortBreak;
-                temporizador(shortBreak, 0);
-            } else {
-                stops();
-            }
-            return;
-        default:
-            break;
-    }
 }
 
 let start = () => {

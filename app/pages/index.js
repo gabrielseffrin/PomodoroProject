@@ -9,11 +9,13 @@ import {
 } from '../model/task.js';
 
 import {
-    USER_NAME
+    USER_NAME,
+    USER_TASKS
 } from '../shared.js';
 
 import {
-    timeToFocus
+    timeToFocus,
+    updateTimeUser
 } from '../util/countdown.js';
 
 let tasks = [];
@@ -26,78 +28,51 @@ let writeTask = (taskString) => {
     document.getElementById('square-task').innerHTML = taskString;
 };
 
-function addTask() {
+function addTask(inputTaks) {
 
     if (isPossibleToAddTask()) {
 
-        let user = JSON.parse(localStorage.getItem('user.padrao'));
-        let userTask = user._task;
 
-        user = new User(user._username, user._password, user._minutes);
+        console.log(inputTaks)
 
-        userTask.forEach(task => {
-            console.log(task.text, task.isVisible);
-            /* user.addTaskUser(task[0]) */
+        let task = JSON.parse(localStorage.getItem(USER_TASKS));
+        let taskString = '';
+        console.log(task)
+
+        task.forEach(task => {
+            tasks.push(new Task(task._text, task._isVisible));
         });
-
-        let taskContentInput = document.getElementsByName('task-content')[0].value;
-
-        for (const task of user.task) {
-            tasks.push(task);
-        }
-
-        tasks.push(new Task(taskContentInput, true));
-        let taskContent = ``;
 
         tasks.forEach(task => {
-            taskContent += task.getTask();
-            user.addTaskUser(task);
+            taskString += task.getTask();
         });
-
-        // escrevendo e zerando a variável taskContent
-        writeTask(taskContent);
-        taskContent = ``;
-
-
-        localStorage.setItem('user.padrao', JSON.stringify(user));
-
-        /* 
-
-                let taskString;
-                let taskContent = document.getElementsByName('task-content')[0].value;
-
-                let task = new Task(taskContent, true);
-                tasks.push(task);
-
-                taskString = ``;
-
-                tasks.forEach(task => {
-                    taskString += task.getTask();
-                });
-
-                writeTask(taskString);
-
-                let user = JSON.parse(localStorage.getItem('user.padrao'));
-                user._tasks = tasks;
-                user = new User(user._username, user._password, user._tasks, user._minutes);
-                localStorage.removeItem('user.padrao');
-                localStorage.setItem('user.padrao', JSON.stringify(user));
-
-                taskString = ``; */
+        writeTask(taskString);
+        console.log(tasks);
+        localStorage.setItem(USER_TASKS, JSON.stringify(tasks));
     } else {
         window.alert('Número máximo de task!');
     }
 
 }
 
+document.getElementById('submit-task').onclick = () => {
+    if (isPossibleToAddTask()) {
+        addTask(tasks.push(new Task(document.getElementsByName('task-content')[0].value, true)));
+
+    }
+};
+
 function initializeUsers() {
-    if (localStorage.getItem(USER_NAME) != null) {
+    if (localStorage.getItem(USER_NAME) != null && localStorage.getItem(USER_TASKS) != null) {
         addTask();
+        updateTimeUser(0);
         return;
     }
-    let user = new User(USER_NAME, '12345', 0);
+    let user = new User(USER_NAME, 0);
+    let userTasks = [];
 
     localStorage.setItem(USER_NAME, JSON.stringify(user));
+    localStorage.setItem(USER_TASKS, JSON.stringify(userTasks));
 }
 
 function isNameValid() {
