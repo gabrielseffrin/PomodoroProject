@@ -100,7 +100,7 @@ Web Storage
 
 - [x] LocalStorage ou SessionStorage
 - [ ] Leitura e escrita de dados simples
-- [ ] Leitura e escrita de JSON
+- [x] Leitura e escrita de JSON
 
 Ajax com Backend
 
