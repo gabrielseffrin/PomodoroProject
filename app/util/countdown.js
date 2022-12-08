@@ -11,8 +11,8 @@ let timeRestante;
 let idToStopTimer;
 
 let totalTime; //guardando o tempo total
-let timeToFocus = 1 * 60; //5 * 60;
-let shortBreak = 1 * 60; //5 * 60;
+let timeToFocus = 25 * 60;
+let shortBreak = 5 * 60;
 const _posicao = [1, 2];
 
 let audio;
