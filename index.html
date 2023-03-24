@@ -6,16 +6,18 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pomodoro</title>
+    <title>RH++</title>
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 
     <!-- font link -->
-    <script src="node_modules/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arima+Madurai">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!-- icon -->
-    <link rel="icon" type="image/png" href="/assets/images/icons8-timer-100.png" />
+    <link rel="icon" type="image/png" href="/assets/images/icons8-hr-100.png" />
 
 
     <!-- CSS only -->
@@ -40,79 +42,52 @@
 
     <div class="container">
 
-        <div class="row">
-            <div id="timer" class="col-6">
-                <div id="settins">
-                    <i type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-stopwatch"></i>
-                </div>
-                <div class="watchTimer">
-                    <div id="col">
-                        <div id="cont">25:00</div>
-                    </div>
-                </div>
-
-                <script>
-                    $(document).ready(function () {
-                        $("#stops").hide();
-                        $("#resume").hide();
-                        $("#play").fadeIn();
-
-                        $("#play").click(function () {
-                            $("#stops").toggle();
-                            $("#play").toggle();
-                        });
-
-                        $("#stops").click(function () {
-                            $("#stops").toggle();
-                            $("#resume").toggle();
-                        });
-
-                        $("#resume").click(function () {
-                            $("#stops").toggle();
-                            $("#resume").toggle();
-                        });
-                    });
-                </script>
-
-                <button id="play" class="button play-stop-button">
-                    <img src="assets/images/play.png" alt="" srcset="">
-                </button>
-                <button id="resume" class="button play-stop-button">
-                    <img src="assets/images/play.png" alt="" srcset="">
-                </button>
-                <button id="stops" class="button play-stop-button">
-                    <img src="assets/images/pause.svg" alt="" srcset="">
-                </button>
-                <div id="progress-bar" class="">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning bg-gradient"
-                            role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 0%"></div>
+        <div class="row" style="margin-bottom: 1%;">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Se candidate a vagas de programação</h5>
+                        <p class="card-text">Venha trabalhar em uma das melhores empresas de programação, com
+                            execelente salário e
+                            participação em grandes projetos.<br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of
+                            Lorem Ipsum.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- tasks -->
-            <div id="task" class="col-6">
-                <h1>Tasks</h1>
-                <div id="square-task"></div>
-                <button class="button" id="add-task" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <p>add task</p>
-                </button>
+            <div class="col-sm-6" style="width: 32rem;">
+                <img src="assets/images/nyljaMX.png" class="card-img-top" alt="códigos caindo de uma nuvem">
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
-                <div id="title-statistics">
-                    <h2>Estatística</h2>
-                </div>
+            <div class="col-sm-6 mb-3 mb-sm-0" style="width: 32rem;">
+                <img src="assets/images/team.png" class="card-img-top" alt="...">
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <h3>tempo focado: <span id="tempo-focado"> 0 min</span></h3>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Conheça nossa equipe</h5>
+                        <p class="card-text">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Juninho0 -> Chefe </li>
+                                <li class="list-group-item">Juninho2 -> RH </li>
+                                <li class="list-group-item">Juninho2 -> Programador Front-End </li>
+                                <li class="list-group-item">Juninho3 -> Programador Back-End</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -121,71 +96,7 @@
         <div id="footer"></div>
     </div>
 
-    <!-- Modal add task-->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Title of Task</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <form action="" method="get" novalidate>
-                        <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-text"></i></span>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-sm" name="task-content" />
-                        </div>
-                    </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" id="submit-task" class="btn btn-primary" data-bs-dismiss="modal"
-                        value="Save changes">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal set timer-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Set Time</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="" method="post" onsubmit="return isInputValid()">
-                    <div class="modal-body">
-                        <form method="get" novalidate>
-                            <div class="mb-3">
-                                <label for="minutes" class="col-form-label">Minutes:</label>
-                                <input type="number" min="1" max="60" class="form-control" value="25" id="minutes-user"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="break" class="col-form-label">Break:</label>
-                                <input type="number" min="1" max="60" class="form-control" value="5" id="break"
-                                    required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal"
-                            value="Save changes">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- modal login-->
+    <!-- modal Login-->
     <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -197,32 +108,60 @@
                 <form action="" method="post" onsubmit="return isNameValid()">
                     <div class="modal-body">
                         <div class="modal-body">
+                            <label for="inputEmail">e-mail</label>
+                            <input id="inputEmail" type="email" value="" name="name" required placeholder="xxxxx@xxxxx">
+                            <hr>
+                            <label for="inputPassword">Senha</label>
+                            <input id="inputPassword" type="password" value="" name="password" required placeholder="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#cadastro">Cadastre-se</button>
+                        <input type="submit" id="logar" class="btn btn-primary" data-bs-dismiss="modal"
+                            href="app/pages/perfil/perfil.html" value="Logar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cadastro -->
+    <div class="modal fade" id="cadastro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cadastre-se</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post" onsubmit="return isNameValid()">
+                    <div class="modal-body">
+                        <div class="modal-body">
                             <label for="inputName">Name</label>
                             <input id="inputName" value="" name="name" required pattern="[A-Z][a-z].* [A-Z][a-z].*">
                             <hr>
-                            <label for="inputName">e-mail</label>
+                            <label for="inputEmail">e-mail</label>
                             <input id="inputEmail" type="email" value="" name="name" required placeholder="xxxxx@xxxxx">
+                            <hr>
+                            <label for="inputPassword">Senha</label>
+                            <input id="inputPassword" type="password" value="" name="password" required placeholder="">
 
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit" id="salvar" class="btn btn-primary" data-bs-dismiss="modal"
-                            value="Save changes">
+                        <input type="submit" class="btn btn-primary" data-bs-dismiss="modal" value="Cadastrar">
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
-<!-- 
-<script>
-    window.addEventListener("load", function (event) {
-        prompt('deixe registrado seu nome')
-    });
-</script> -->
+
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="module" src="/app/pages/index.js"></script>
+<script type="module" src="/app/shared.js"></script>
 
 </html>
