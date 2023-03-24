@@ -1,5 +1,7 @@
 @import url(header.css);
-@import url(perfil.css);
+@import url(reset.css);
+@import url(/app/pages/perfil/perfil.css);
+@import url(/app/pages/rh/rh.css);
 
 * {
     box-sizing: border-box;
@@ -20,4 +22,12 @@ input:valid {
 
 body>.container {
     margin-top: 1%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
 }

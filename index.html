@@ -119,7 +119,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                             data-bs-target="#cadastro">Cadastre-se</button>
                         <input type="submit" id="logar" class="btn btn-primary" data-bs-dismiss="modal"
-                            href="app/pages/perfil/perfil.html" value="Logar">
+                            href="/app/pages/perfil/perfil.html" value="Logar">
                     </div>
                 </form>
             </div>
@@ -142,11 +142,13 @@
                             <label for="inputName">Name</label>
                             <input id="inputName" value="" name="name" required pattern="[A-Z][a-z].* [A-Z][a-z].*">
                             <hr>
-                            <label for="inputEmail">e-mail</label>
-                            <input id="inputEmail" type="email" value="" name="name" required placeholder="xxxxx@xxxxx">
+                            <label for="inputEmailCadastro">e-mail</label>
+                            <input id="inputEmailCadastro" type="email" value="" name="name" required
+                                placeholder="xxxxx@xxxxx">
                             <hr>
-                            <label for="inputPassword">Senha</label>
-                            <input id="inputPassword" type="password" value="" name="password" required placeholder="">
+                            <label for="inputPasswordCadastro">Senha</label>
+                            <input id="inputPasswordCadastro" type="password" value="" name="password" required
+                                placeholder="">
 
                         </div>
                     </div>
@@ -160,7 +162,7 @@
 </body>
 
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="module" src="/app/pages/index.js"></script>
 <script type="module" src="/app/shared.js"></script>
 

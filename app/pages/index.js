@@ -4,11 +4,26 @@
 let login = document.getElementById('logar').onclick = () => {
 
     let email = document.getElementById('inputEmail').value + '';
+    let acao = document.getElementById('acao');
 
-    if (email === 'fff')
-        window.location.href = '/app/pages/perfil/perfil.html';
-    else
-        console.log(email);
+    switch (email) {
+        case 'programador@gmail.com':
+            window.location.href = '/app/pages/perfil/perfil.html';
+            break;
+
+        case 'rh@rh.com':
+            acao.innerHTML = '<h1>333</h1>';
+            window.location.href = '/app/pages/rh/rh.html';
+            break;
+
+        case 'chefe@gmail.com':
+            window.location.href = '/app/pages/perfil/perfil.html';
+            break;
+
+        default:
+            window.alert('Login Errado');
+            break;
+    }
 
 };
 
